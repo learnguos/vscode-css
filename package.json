@@ -1,0 +1,32 @@
+{
+  "name": "vscode-css",
+  "displayName": "vscode-css",
+  "description": "css代码片段提示插件",
+  "version": "1.0.0",
+  "publisher": "learnguo",
+  "keywords": [
+    "css"
+  ],
+  "repository": {
+    "url": "https://github.com/learnguos/vscode-css"
+  },
+  "icon": "vscode-css.png",
+  "engines": {
+    "vscode": "^1.27.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "vue-css",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "html-css",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

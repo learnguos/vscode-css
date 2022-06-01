@@ -1,0 +1,953 @@
+{
+  // 选择器
+  "选择所有未被访问的链接": {
+    "prefix": [":link"],
+    "body": [":link"]
+  },
+  "选择所有已被访问的链接": {
+    "prefix": [":visited"],
+    "body": [":visited"]
+  },
+  "选择鼠标指针位于其上的链接": {
+    "prefix": [":hover"],
+    "body": [":hover"]
+  },
+  "选择活动链接（鼠标按下未弹起的链接）": {
+    "prefix": [":active"],
+    "body": [":active"]
+  },
+  "focus伪类选择器，光标(焦点)进去表单时,显示的效果，光标离开恢复默认。": {
+    "prefix": [":focus"],
+    "body": [":focus"]
+  },
+  "选择具有x属性的标签": {
+    "prefix": ["[x]"],
+    "body": ["[x]"]
+  },
+  "选择具有x属性且属性值等于z的标签": {
+    "prefix": ["[x=\"x属性的属性值z\"]"],
+    "body": ["[x=\"x属性的属性值z\"]"]
+  },
+  "选择具有x属性且属性值中含有z的元素": {
+    "prefix": ["[x*=\"x属性的属性值z\"]"],
+    "body": ["[x*=\"x属性的属性值z\"]"]
+  },
+  "在元素内部的前面插入内容，创建的伪元素属于行内元素。": {
+    "prefix": [":before"],
+    "body": [":before {", "  content: \"内容\";", "}"]
+  },
+  "在元素内部的后面插入内容，创建的伪元素属于行内元素。": {
+    "prefix": [":after"],
+    "body": [":after {", "  content: \"内容\";", "}"]
+  },
+  "选择该元素内容的第一个字符": {
+    "prefix": [":first-letter"],
+    "body": [":first-letter"]
+  },
+  "选择每个元素内容的首行": {
+    "prefix": [":first-line"],
+    "body": [":first-line"]
+  },
+  "匹配父元素中的第一个子元素": {
+    "prefix": [":first-child"],
+    "body": [":first-child"]
+  },
+  "匹配父元素中最后一个元素": {
+    "prefix": [":last-child"],
+    "body": [":last-child"]
+  },
+  "匹配父元素中的第n个元素": {
+    "prefix": [":nth-child(n)"],
+    "body": [":nth-child(n)"]
+  },
+  "指定元素的第一个": {
+    "prefix": [":first-of-type"],
+    "body": [":first-of-type"]
+  },
+  "指定元素的最后一个": {
+    "prefix": [":last-of-type"],
+    "body": [":last-of-type"]
+  },
+  "指定元素的第n个": {
+    "prefix": [":nth-of-type(n)"],
+    "body": [":nth-of-type(n)"]
+  },
+  "样式权重无穷大": {
+    "prefix": ["!important"],
+    "body": ["!important"]
+  },
+
+  // 显示模式转换
+  "转换为块级元素": {
+    "prefix": ["display:block"],
+    "body": ["display:block"]
+  },
+  "转换为行内元素": {
+    "prefix": ["display:inline;"],
+    "body": ["display:inline;"]
+  },
+  "转换为行内块元素": {
+    "prefix": ["display:inline-block;"],
+    "body": ["display:inline-block;"]
+  },
+
+  // 宽度和高度
+  "定义宽度": {
+    "prefix": ["width"],
+    "body": ["width: $1px;"]
+  },
+  "定义高度": {
+    "prefix": ["height"],
+    "body": ["height: $1px;"]
+  },
+  "自适应高度": {
+    "prefix": ["height"],
+    "body": ["height: auto;"]
+  },
+  "最大宽度": {
+    "prefix": ["max-width"],
+    "body": ["max-width: $1px;"]
+  },
+  "最大高度": {
+    "prefix": ["max-height"],
+    "body": ["max-height: $1px;"]
+  },
+  "最小宽度": {
+    "prefix": ["min-width"],
+    "body": ["min-width: $1px;"]
+  },
+  "最小高度": {
+    "prefix": ["min-height"],
+    "body": ["min-width: $1px;"]
+  },
+
+  // 定位
+  "静态定位": {
+    "prefix": ["position: static;"],
+    "body": ["position: static;", "top: 0px;", "left: 0px;"]
+  },
+  "相对定位": {
+    "prefix": ["position: relative;"],
+    "body": ["position: relative;", "top: 0px;", "left: 0px;"]
+  },
+  "绝对定位": {
+    "prefix": ["position: absolute;"],
+    "body": ["position: absolute;", "top: 0px;", "left: 0px;"]
+  },
+  "固定定位": {
+    "prefix": ["position: fixed;"],
+    "body": ["position: fixed;", "top: 0px;", "left: 0px;"]
+  },
+
+  // 边框
+  "边框颜色": {
+    "prefix": ["border-color"],
+    "body": ["/* transparent属性值为透明 */", "border-color: $1;"]
+  },
+  "边框高度": {
+    "prefix": ["border-width"],
+    "body": ["border-width: $1;"]
+  },
+  "边框样式": {
+    "prefix": ["border-style"],
+    "body": [
+      "/* nome无边框/hidden隐藏边框/dotted点线/dashed虚线/solid实线/double双线边框/groove凹槽边框/ridge垄状边框/ */",
+      "border-width: ${1|nome,hidden,dotted,dashed,solid,double,groove,ridge|};"
+    ]
+  },
+  "边框复合写法": {
+    "prefix": ["border"],
+    "body": ["border: #$1 $0px solid"]
+  },
+  "上边框复合写法": {
+    "prefix": ["border-top"],
+    "body": ["border-top: #$1 $0px solid"]
+  },
+  "下边框复合写法": {
+    "prefix": ["border-bottom"],
+    "body": ["border-bottom: #$1 $0px solid"]
+  },
+  "左边框复合写法": {
+    "prefix": ["border-left"],
+    "body": ["border-left: #$1 $0px solid"]
+  },
+  "右边框复合写法": {
+    "prefix": ["border-right"],
+    "body": ["border-right: #$1 $0px solid"]
+  },
+  "圆角边框": {
+    "prefix": ["border-radius"],
+    "body": ["border-radius: 50%"]
+  },
+  "左上角圆角边框": {
+    "prefix": ["border-top-left-radius"],
+    "body": ["border-top-left-radius: 50%"]
+  },
+  "右上角圆角边框": {
+    "prefix": ["border-top-right-radius"],
+    "body": ["border-top-right-radius: 50%"]
+  },
+  "右下角圆角边框": {
+    "prefix": ["border-bottom-right-radius"],
+    "body": ["border-bottom-right-radius: 50%"]
+  },
+  "左下角圆角边框": {
+    "prefix": ["border-bottom-left-radius"],
+    "body": ["border-bottom-left-radius: 50%"]
+  },
+  "边框图片路径": {
+    "prefix": ["border-image-source"],
+    "body": ["border-image-source: url($1);"]
+  },
+  "边框图片内偏移": {
+    "prefix": ["border-image-slice"],
+    "body": ["border-image-slice: $1;"]
+  },
+  "边框图片宽度": {
+    "prefix": ["border-image-width"],
+    "body": ["border-image-width: $1px;"]
+  },
+  "边框图片平铺样式": {
+    "prefix": ["border-image-repeat"],
+    "body": ["border-image-repeat:  ${1|repeat,round,stretch|};"]
+  },
+
+  // 轮廓
+  "轮廓复合写法": {
+    "prefix": ["outline"],
+    "body": ["outline: #ccc 1px style;"]
+  },
+  "上轮廓复合写法": {
+    "prefix": ["outline-top"],
+    "body": ["outline-top: #ccc 1px style;"]
+  },
+  "下轮廓复合写法": {
+    "prefix": ["outline-buttom"],
+    "body": ["outline-buttom: #ccc 1px style;"]
+  },
+  "左轮廓复合写法": {
+    "prefix": ["outline-left"],
+    "body": ["outline-left: #ccc 1px style;"]
+  },
+  "右轮廓复合写法": {
+    "prefix": ["outline-right"],
+    "body": ["outline-right: #ccc 1px style;"]
+  },
+
+  // 内边距
+  "内边距与顶部拉开距离": {
+    "prefix": ["padding-top"],
+    "body": ["padding-top: $1px;"]
+  },
+  "内边距与右边拉开距离": {
+    "prefix": ["padding-right"],
+    "body": ["padding-right: $1px;"]
+  },
+  "内边距与左边拉开距离": {
+    "prefix": ["padding-left"],
+    "body": ["padding-left: $1px;"]
+  },
+  "内边距与下边拉开距离": {
+    "prefix": ["padding-buttom"],
+    "body": ["padding-buttom: $1px;"]
+  },
+  "内边距复合写法": {
+    "prefix": ["padding"],
+    "body": [
+      " /* ,只写一个属性值默认应用四个距离。两个值应用上下和左右。三个值则第一个为上，第二个为左右，第三个为下。四个值则为上右下左 */",
+      "padding: $1;"
+    ]
+  },
+
+  // 外边距
+  "外边距与顶部拉开距离": {
+    "prefix": ["margin-top"],
+    "body": ["margin-top: $1px;"]
+  },
+  "外边距与右边拉开距离": {
+    "prefix": ["margin-right"],
+    "body": ["margin-right: $1px;"]
+  },
+  "外边距与左边拉开距离": {
+    "prefix": ["margin-left"],
+    "body": ["margin-left: $1px;"]
+  },
+  "外边距与下边拉开距离": {
+    "prefix": ["margin-buttom"],
+    "body": ["margin-buttom: $1px;"]
+  },
+  "外边距复合写法": {
+    "prefix": ["margin"],
+    "body": [
+      " /* ,只写一个属性值默认应用四个距离。两个值应用上下和左右。三个值则第一个为上，第二个为左右，第三个为下。四个值则为上右下左 */",
+      "margin: $1;"
+    ]
+  },
+
+  // 浮动
+  "浮动": {
+    "prefix": ["float"],
+    "body": ["margin: ${1|none,left,right|};"]
+  },
+  "双伪元素清除浮动": {
+    "prefix": ["float清除浮动给父元素添加"],
+    "body": [
+      ".clearfix:before,",
+      ".clearfix:after {",
+      "  content: \"\";",
+      "display: table;",
+      "",
+      ".clearfix:after {",
+      "  clear: both;",
+      "}",
+      "",
+      ".clearfix {",
+      "  *zoom: 1;",
+      "}"
+    ]
+  },
+
+  // 背景
+  "背景颜色": {
+    "prefix": ["background-color"],
+    "body": ["background-color: $1;"]
+  },
+  "背景图片": {
+    "prefix": ["background-image"],
+    "body": ["background-color: ${1|none,url()|};"]
+  },
+  "背景图片平铺": {
+    "prefix": ["background-repeat"],
+    "body": ["background-repeat: ${1|repeat,no-repeat,repeat-x,repeat-y|};"]
+  },
+  "背景图象位置": {
+    "prefix": ["background-position"],
+    "body": ["background-position: $1;"]
+  },
+  "背景图象固定": {
+    "prefix": ["background-attachment"],
+    "body": ["background-attachment: ${1|scroll,fixed|};"]
+  },
+  "背景图象大小": {
+    "prefix": ["background-size"],
+    "body": ["background-attachment: ${1|px,%,cover,contain|};"]
+  },
+  "背景复合写法": {
+    "prefix": ["background"],
+    "body": ["background: #ccc url() no-repeat scroll left top;"]
+  },
+  "背景颜色线性渐变(css3)": {
+    "prefix": ["background-image"],
+    "body": ["background-image: linear-gradient($1, $0);"]
+  },
+
+  // 表单
+  "修改表单value属性值颜色": {
+    "prefix": ["bd~修改表单value属性值颜色"],
+    "body": ["input[value] {", "  color: rgb(228, 240, 161);", "}"]
+  },
+  "去掉光标进入表单显示默认轮廓": {
+    "prefix": ["bd~去掉光标进入表单显示默认轮廓"],
+    "body": ["outline: none;"]
+  },
+  "输入框鼠标焦点颜色": {
+    "prefix": ["bd~输入框鼠标焦点颜色"],
+    "body": ["caret-color: aquamarine;"]
+  },
+  "防止表单文本域拖拽": {
+    "prefix": ["bd~防止表单文本域拖拽"],
+    "body": ["resize: none;"]
+  },
+
+  // 表格初始化
+  "表格初始化": {
+    "prefix": ["bg~表格初始化"],
+    "body": [
+      "table {",
+      "  /* 合并表格边框 */",
+      "  border-collapse: collapse;",
+      "  border-color: ccc;",
+      "  border: 1px #ccc solid;",
+      "}",
+      "th,",
+      "td {",
+      "  border: 1px #ccc solid;",
+      "}"
+    ]
+  },
+
+  // 列表
+  "去掉列表符号": {
+    "prefix": ["lb~去掉列表符号"],
+    "body": ["list-style:none;"]
+  },
+
+  // 行内元素和行内块元素的垂直对齐方式（属性放在行内块元素）
+  "默认放置在行内块的基线上": {
+    "prefix": ["vertical", "hn~默认放置在行内块的基线上"],
+    "body": ["vertical-align: baseline;"]
+  },
+  "把行内元素行高与行内块元素的顶端对齐": {
+    "prefix": ["vertical", "hn~把行内元素行高与行内块元素的顶端对齐"],
+    "body": ["vertical-align: top;"]
+  },
+  "行内元素在行内块元素高度内垂直居中": {
+    "prefix": ["vertical", "hn~行内元素在行内块元素高度内垂直居中"],
+    "body": ["vertical-align: middle;"]
+  },
+  "把行内元素行高与行内块元素的低端对齐": {
+    "prefix": ["vertical", "hn~把行内元素行高与行内块元素的低端对齐"],
+    "body": ["vertical-align: bottom;"]
+  },
+
+  // 鼠标经过元素光标形状改变
+  "鼠标经过元素光标形状为默认的": {
+    "prefix": ["cursor: default;", "sb~鼠标经过元素光标形状为默认的"],
+    "body": ["cursor: default;"]
+  },
+  "鼠标经过元素光标形状为小手的": {
+    "prefix": ["cursor: pointer;", "sb~鼠标经过元素光标形状为小手的"],
+    "body": ["cursor: pointer;"]
+  },
+  "鼠标经过元素光标形状为移动": {
+    "prefix": ["cursor: move;", "sb~鼠标经过元素光标形状为移动"],
+    "body": ["cursor: move;"]
+  },
+  "鼠标经过元素光标形状为文本": {
+    "prefix": ["cursor: text;", "sb~鼠标经过元素光标形状为文本"],
+    "body": ["cursor: text;"]
+  },
+  "鼠标经过元素光标形状为禁止": {
+    "prefix": ["cursor: not-allowed;", "sb~鼠标经过元素光标形状为禁止"],
+    "body": ["cursor: not-allowed;"]
+  },
+
+  // 元素的显示与隐藏
+  "隐藏元素并脱离标准流": {
+    "prefix": ["display:none;", "yc~隐藏元素并脱离标准流"],
+    "body": ["display:none;"]
+  },
+  "隐藏元素不脱离标准流": {
+    "prefix": ["visibility:hidden;", "yc~隐藏元素不脱离标准流"],
+    "body": ["visibility:hidden;"]
+  },
+  "显示脱离标准流的元素": {
+    "prefix": ["display:block;", "xs~显示脱离标准流的元素"],
+    "body": ["display:block;"]
+  },
+  "显示不脱离标准流的元素": {
+    "prefix": ["visibility: visible;", "xs~显示不脱离标准流的元素"],
+    "body": ["visibility: visible;"]
+  },
+
+  // 元素内容溢出操作(用于超出部分显示滚动条或超出部分隐藏)
+  "不剪切内容也不添加滚动条": {
+    "prefix": ["overflow:visible;", "yc~不剪切内容也不添加滚动条"],
+    "body": ["overflow:visible;"]
+  },
+  "不显示超过对象尺寸的内容，超出的部分隐藏掉。": {
+    "prefix": [
+      "overflow:hiddem;",
+      "yc~不显示超过对象尺寸的内容，超出的部分隐藏掉。"
+    ],
+    "body": ["overflow:hiddem;"]
+  },
+  "不管超出内容与否，总是显示滚动条。": {
+    "prefix": ["overflow:scroll;", "yc~不管超出内容与否，总是显示滚动条。"],
+    "body": ["overflow:scroll;"]
+  },
+  "超出自定显示滚动条，不超出不显示滚动条。": {
+    "prefix": ["overflow:auto;", "yc~超出自定显示滚动条，不超出不显示滚动条。"],
+    "body": ["overflow:auto;"]
+  },
+  "上下超出部分": {
+    "prefix": ["overflow-y", "yc~上下超出部分"],
+    "body": ["overflow-y"]
+  },
+  "左右超出部分": {
+    "prefix": ["overflow-x", "yc~左右超出部分"],
+    "body": ["overflow-x"]
+  },
+
+  // 滚动条实现
+  "滚动条实现": {
+    "prefix": ["gdt~滚动条实现"],
+    "body": [
+      " div {",
+      "  width: 100px;",
+      "  height: 100px;",
+      "  background-color: rgb(87, 119, 207);",
+      "  /* 设置内容超出元素显示滚动条并隐藏超出内容 */",
+      "  overflow: auto;",
+      "}",
+      "div::-webkit-scrollbar {",
+      "  /*滚动条整体样式*/",
+      "  /*高宽分别对应横竖滚动条的尺寸*/",
+      "  width: 2px;",
+      "  height: 1px;",
+      "}",
+      "div::-webkit-scrollbar-thumb {",
+      "  /*滚动条里面小方块样式*/",
+      "  border-radius: 10px;",
+      "  box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1);",
+      "  background: #78b4b4;",
+      "}",
+      "div::-webkit-scrollbar-track {",
+      "  /*滚动条里面轨道的样式*/",
+      "  box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1);",
+      "  border-radius: 10px;",
+      "  background: #ededed;",
+      "}"
+    ]
+  },
+
+  // 字体
+  "设置字体类型": {
+    "prefix": ["font-family", "zt~设置字体类型"],
+    "body": ["font-family：'Microsoft YaHei', 'Microsoft YaHei';"]
+  },
+  "引入字体并设置字体类型": {
+    "prefix": ["font", "zt~引入字体并设置字体类型"],
+    "body": [
+      " @font-face {",
+      "  font-family: 创客贴金刚体;",
+      "  src: url(../创客贴金刚体.otf);",
+      "}",
+      "",
+      "div {",
+      "  font-family: 创客贴金刚体;",
+      "}"
+    ]
+  },
+  "字体大小": {
+    "prefix": ["font-size", "zt~字体大小"],
+    "body": ["font-size: $1px ;"]
+  },
+  "字体粗细": {
+    "prefix": ["font-weight", "zt~字体粗细"],
+    "body": ["font-weight: ${1|bold,700,nomber,400|};"]
+  },
+  "字体样式": {
+    "prefix": ["font-style", "zt~字体样式"],
+    "body": ["font-style: ${1|normal,italic|};"]
+  },
+  "字体行高": {
+    "prefix": ["line-height", "zt~字体行高"],
+    "body": ["line-height: $1px;"]
+  },
+  "字体间隔": {
+    "prefix": ["letter-spacing", "zt~字体间隔"],
+    "body": ["letter-spacing: $1px;"]
+  },
+  "字符串中的字母大小写切换": {
+    "prefix": ["text-transform", "zt~字符串中的字母大小写切换"],
+    "body": ["text-transform: ${1|none,uppercase,lowercase,capitalize|};"]
+  },
+  "复合写法": {
+    "prefix": ["font", "zt~复合写法"],
+    "body": [
+      "/* 字体样式 字体粗细 文字大小属性值(必须保留)/文本行高属性值 字体类型 */",
+      "font: $1;"
+    ]
+  },
+  "字体颜色": {
+    "prefix": ["color", "zt~字体颜色"],
+    "body": ["color: $1;"]
+  },
+  "字体水平对齐": {
+    "prefix": ["text-align", "zt~字体水平对齐"],
+    "body": ["text-align: ${1|left,right,center|};"]
+  },
+  "文本装饰": {
+    "prefix": ["text-decoration", "zt~文本装饰"],
+    "body": ["text-decoration: ${1|none,underline,overline,line-through|};"]
+  },
+  "首行文本缩进": {
+    "prefix": ["text-indent", "zt~首行文本缩进"],
+    "body": ["text-indent: ${1|em,xp,%|};"]
+  },
+  "实现单行文本溢出显示省略号": {
+    "prefix": ["zt~实现单行文本溢出显示省略号"],
+    "body": [
+      "white-space: nowrap;",
+      "overflow: hidden;",
+      "text-overflow: ellipsis;"
+    ]
+  },
+  "实现多行文本溢出显示省略号": {
+    "prefix": ["zt~实现多行文本溢出显示省略号"],
+    "body": [
+      "overflow:hidden;",
+      "text-overflow: ellipsis;",
+      "display: -webkit-box;",
+      "-webkit-line-clamp: 2;",
+      "-webkit-box-orient: vertical;"
+    ]
+  },
+  "英文字符强制换行": {
+    "prefix": ["word-wrap", "zt~英文字符强制换行"],
+    "body": ["word-wrap: break-word;"]
+  },
+  "文字排列方式": {
+    "prefix": ["writing-mode", "zt~文字排列方式"],
+    "body": ["writing-mode: ${1|horizontal-tb,vertical-rl|};"]
+  },
+
+  // 私有浏览器前缀
+  "firefox浏览器私有属性": {
+    "prefix": ["-moz-"],
+    "body": ["-moz-"]
+  },
+  "代表ie浏览器私有属性": {
+    "prefix": ["-ms-"],
+    "body": ["-ms-"]
+  },
+  "代表safari，chrome私有属性": {
+    "prefix": ["-webkit-"],
+    "body": ["-webkit-"]
+  },
+  "代表Opera私有属性": {
+    "prefix": ["-o-"],
+    "body": ["-o-"]
+  },
+
+  // 计算属性数值的函数(css3)
+  "计算属性数值的函数(css3)": {
+    "prefix": ["calc"],
+    "body": ["calc($1)"]
+  },
+
+  // 元素模糊
+  "元素模糊(css3)": {
+    "prefix": ["filter:blur", "ys~元素模糊(css3)"],
+    "body": ["filter:blur($1px);"]
+  },
+
+  // 元素亮度
+  "元素亮度(css3)": {
+    "prefix": ["filter: brightness", "ys~元素亮度(css3)"],
+    "body": ["filter: brightness($1%);"]
+  },
+
+  // 元素透明度(css3)
+  "元素透明度(css3)": {
+    "prefix": ["opacity", "ys~元素透明度(css3)"],
+    "body": ["opacity: $1%;"]
+  },
+
+  // 阴影
+  "块级元素阴影(css3)": {
+    "prefix": ["box-shadow", "yy~块级元素阴影(css3)"],
+    "body": [
+      "/* 第一个参数：单位xp必须有水平阴影位置允许负值 */",
+      "/* 第二个参数：单位xp必须有垂直阴影的位置允许负值 */",
+      "/* 第三个参数：单位xp可选模糊距离 */",
+      "/* 第四个参数：颜色可选阴影颜色 */",
+      "/* 第五个参数：inset可选将外部阴影改为内部阴影默认为外部阴影 */",
+      "box-shadow: $1;"
+    ]
+  },
+  "文字阴影(css3)": {
+    "prefix": ["text-shadow", "yy~文字阴影(css3)"],
+    "body": [
+      "/* 第一个参数：单位xp必须有水平阴影位置允许负值 */",
+      "/* 第二个参数：单位xp必须有垂直阴影的位置允许负值 */",
+      "/* 第三个参数：单位xp可选模糊距离 */",
+      "/* 第四个参数：颜色可选阴影颜色 */",
+      "/* 第五个参数：inset可选将外部阴影改为内部阴影默认为外部阴影 */",
+      "text-shadow: $1;"
+    ]
+  },
+
+  // 盒子模型
+  "传统的盒子模型": {
+    "prefix": ["box-sizing", "hz~传统的盒子模型"],
+    "body": ["box-sizing:content-box;"]
+  },
+  "css3盒子模型": {
+    "prefix": ["box-sizing", "hz~css3盒子模型"],
+    "body": ["box-sizing:border-box;"]
+  },
+
+  // 动画
+  "                           ": {
+    "prefix": ["dh~简单动画过渡(css3)"],
+    "body": [
+      "div:hover {",
+      "  transition: 要过渡的属性所有的属性都变化过渡填all",
+      "    花费时间单位是秒s，必须写单位",
+      "    运动曲线默认是ease逐渐慢下来可以忽略/linear匀速/ease-out加速/ease-in-out先加速后减速",
+      "    何时开始单位是秒必须写单位 默认是0s，可以忽略;",
+      "}"
+    ]
+  },
+  "                            ": {
+    "prefix": ["dh~高级动画过渡(css3)"],
+    "body": [
+      "div {",
+      "  width: 100px;",
+      "  height: 200px;",
+      "  background-color: #000;",
+      "  /* 使用动画，move是自己定义的动画名称 */",
+      "  animation-name: move;",
+      "  /* 持续时间单位秒s */",
+      "  animation-duration: 1s;",
+      "  /* cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。 */",
+      "  /* 速度曲线,默认值为ease动画以低速开始，然后加快，在结束前变慢。 */",
+      "  /* linear规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1) */",
+      "  /* ease默认规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。 */",
+      "  /* ease-in定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。 */",
+      "  /* ease-out规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。 */",
+      "  /* ease-in-out规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。 */",
+      "  /* cubic-bezier(*n*,*n*,*n*,*n*)在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。 */",
+      "/* steps(1,start或end)在动画时间内的变化次数，有两个参数第一个参数指定函数的间隔数，该参数是一个正整数（大于 0）。 第二个参数是可选的，表示动画是从时间段的开头连续还是末尾连续。 */",
+      "animation-timing-function: ease;",
+      "/* 规定动画何时开始，默认是0 */",
+      "animation-delay: 0;",
+      "/* 规定动画被播放的次数，默认是1，还有infinite无限循环的意思 */",
+      "animation-iteration-count: 1;",
+      "/* 规定动画是否在下一周期逆向播放，默认是\"normal\"不逆播放，\"alternate\"逆播放 */",
+      "animation-direction: normal;",
+      "/* 规定动画是否正在运行或暂停。默认是\"running\"运行，\"paused\"暂停 */",
+      "animation-play-state: running;",
+      "/* 规定动画结束后状态，保持在结束的位置状态forwards或者默认是回到起始位置状态backwards */",
+      "animation-fill-mode: backwards;",
+      "}",
+      "/* move是动画名称，可以自己定义 */",
+      "/* 0%和100%可以用关键词\"from\"和\"to\"代替 */",
+      "@keyframes move {",
+      "  /* 开始状态 */",
+      "  0% {",
+      "  height: 200px;",
+      "  transform: translateX(0px);",
+      "}",
+      "/* 结束状态 */",
+      "100% {",
+      "  height: 100px;",
+      "  transform: translateX(100px);",
+      "}",
+      "}"
+    ]
+  },
+
+  // 2D转换(css3)
+  "                          ": {
+    "prefix": ["2d转换(css3)~移动元素"],
+    "body": ["transform:translate(${1:x轴},${0:y轴});"]
+  },
+  "                         ": {
+    "prefix": ["2d转换(css3)~元素旋转"],
+    "body": [
+      "/* 数值为正时是顺时针旋转，deg表示度数。 */",
+      "transform: rotate(45deg);"
+    ]
+  },
+  "                        ": {
+    "prefix": ["2d转换(css3)~元素缩放"],
+    "body": [
+      "/* 宽和高都放大了2倍,只写一个参数同步宽和高，小数代表缩放 */",
+      "/* transform-origin: left bottom; 左下角缩放/放大 */",
+      "/* sform-tranorigin: right bottom; 右下角缩放/放大 */",
+      "/* transform-origin: left top; 左上角缩放/放大 */",
+      "/* transform-origin: right top; 右上角缩放/放大 */",
+      "transform:scale(2,2);"
+    ]
+  },
+  "                       ": {
+    "prefix": ["2d转换(css3)~综合写法"],
+    "body": ["transform: translate()  rotate()   scale();"]
+  },
+
+  // 3D转换(css3)
+  "                      ": {
+    "prefix": ["3d转换(css3)~1-移动"],
+    "body": [
+      "/* 其中x，y，z分别指要移动的轴的方向距离 */",
+      "/* transform:translatez(100px); 仅仅是在z轴上移动(一般用px单位)，往外面是正值，往里面是负值。*/",
+      "/* transform:translatey(100px); 仅仅是在y轴上移动，下面是正值，上面是负值。*/",
+      "/* transform:translatex(100px); 仅仅是在x轴上移动，右边正值，左边负值。*/",
+      "transform:translate3d(x,y,z);"
+    ]
+  },
+  "                     ": {
+    "prefix": ["3d转换(css3)~2.透视(写在父盒子上)"],
+    "body": ["perspective: 500px;"]
+  },
+  "                    ": {
+    "prefix": ["3d转换(css3)~3.呈现(写在父盒子上)"],
+    "body": [
+      "/* 默认子元素不开启3d立体空间 transform-style: flat; */",
+      "transform-style: preserve-3d;"
+    ]
+  },
+  "                   ": {
+    "prefix": ["3d转换(css3)~4.旋转"],
+    "body": [
+      "/* 围绕y轴旋转180度，正值为向右方向旋转，负值为向左 transform: rotatey(180deg); */",
+      "/* 围绕z轴旋转180度，正值时向右边平面旋转，负值为向左 transform: rotatez(180deg); */",
+      "/* 自定义轴旋转 */",
+      "/* 第一个参数为x轴, 1表示沿着x轴旋转 */",
+      "/* 第二个参数为y轴, 0表示没有沿着y轴旋转 */",
+      "/* 第三个参数为z轴, 0表示没有沿着z轴旋转 */",
+      "/* 如果同时有多个1就表示与交叉轴的角度旋转 */",
+      "/* transform: rotate3d(1,0,0,180deg); */",
+      "/* 还可以不同轴设置不同的旋转角度 */",
+      "/* transform: rotatey(80deg) rotatex(1180deg); */",
+      "/* 围绕x轴旋转180度，正值为向上方向旋转，负值为向下方向旋转。 */",
+      "transform: rotatex(180deg);"
+    ]
+  },
+
+  // flex弹性布局(css3)
+  "                  ": {
+    "prefix": ["flex~1.给父元素添加容器"],
+    "body": ["display: flex;"]
+  },
+  "                 ": {
+    "prefix": ["flex~2.给父元素添加子元素排列方向属性"],
+    "body": [
+      "/* 默认为row元素从左到右开始排列 / row-reverse元素从右到左开始排列 / column元素从上到下排列 / column-reverse元素从下到上开始排列 */",
+      "flex-direction: $1;"
+    ]
+  },
+  "                ": {
+    "prefix": ["flex~3.给父元素添加子元素主轴方向上的排列方式属性"],
+    "body": [
+      "/* flex-start默认值第一个子元素靠左开始向右排列 / flex-end最后的子元素靠右开始向左开始排列 / center子元素挨到一起，居中对齐。 / space-around左右留点小空间再平分剩余空间 / space-between先两边贴边 再平分剩余空间 */",
+      "justify-content: $1;"
+    ]
+  },
+  "               ": {
+    "prefix": ["flex~4.给父元素添加子元素是否换行属性"],
+    "body": ["/* nowrap默认值不换行 wrap换行 */", "flex-wrap: $1;"]
+  },
+  "              ": {
+    "prefix": ["flex~5.给父元素添加子元素侧轴方向上的排列方式属性(单行)"],
+    "body": [
+      "/* flex-start默认值从上到下 / flex-end从下到上 / center挤在一起居中 / stretch拉伸 */",
+      "align-items: $1;"
+    ]
+  },
+  "             ": {
+    "prefix": ["flex~6.给父元素添加子元素侧轴方向上的排列方式属性(多行)"],
+    "body": [
+      "/* flex-start默认值在侧轴的头部开始排列 / flex-end在侧轴的尾部开始排列 / center在侧轴中间显示 / space-around子项在侧轴平分剩余空间 / space-between子项在侧轴先分布在两头，再平分剩余空间 / stretch设置子项元素高度平分父元素高度 */",
+      "align-content: $1;"
+    ]
+  },
+  "            ": {
+    "prefix": ["flex~7.给子元素添加宽度相关的属性"],
+    "body": [
+      "/* 默认值为0，设置为1表示平分父元素主轴宽度，或填充剩余空间。 */",
+      "/* flex-grow: 1; */",
+      "/* 设置主轴上子元素的宽度 */",
+      "/* flex-basis: 20px; */",
+      "/* 默认值为1，当子元素大小超过父元素时，会平均分配宽度，不会溢出父盒子。 */",
+      "/* 如果值为0，不会平均分配宽度，会溢出父盒子，显示原宽度。 */",
+      "/* flex-shrink: 1; */",
+      "/* flex为以上三个的简写属性，第一个参数为flex-grow，第二个参数为flex-shrink，第三个参数为flex-basis */",
+      "flex: $1;"
+    ]
+  },
+  "           ": {
+    "prefix": ["flex~8.给子元素添加排列顺序的属性"],
+    "body": [
+      "/* 默认为0，填1则表示把当前子元素插入到后面一位。 */",
+      "order: 1;"
+    ]
+  },
+  "          ": {
+    "prefix": ["flex~9.给侧轴方向上的子元素添加排列方式属性"],
+    "body": [
+      "/* flex-start默认值从上到下 / flex-end从下到上 / center挤在一起居中 / stretch拉伸 */",
+      "align-self: $1;"
+    ]
+  },
+
+  // grid网格布局(css3)
+  "         ": {
+    "prefix": ["grid~1.使父元素成为网格容器"],
+    "body": ["/* 或者display: inline-grid; */", "display: grid;"]
+  },
+  "        ": {
+    "prefix": ["grid~2.给父元素添加grid-template-columns设置列数"],
+    "body": [
+      "/* 默认值为auto表示只有1列 */",
+      "/* 默认值为auto auto表示有2列 */",
+      "/* 默认值为auto可以是px指定每列的宽度 */",
+      "grid-template-columns: auto;"
+    ]
+  },
+  "       ": {
+    "prefix": ["grid~3.给父元素添加grid-template-rows设置每行的高度"],
+    "body": [
+      "/* 默认值为auto表示每行高度平均分配 */",
+      "/* 默认值为100px 110px 120px表示设置第一行高度为100px，第二行高度为110px，第三行高度为120px。 */",
+      "grid-template-rows: auto;"
+    ]
+  },
+  "      ": {
+    "prefix": ["grid~4.给父元素添加grid-row-gap设置这些元素行的间隔"],
+    "body": ["grid-row-gap: 10px;"]
+  },
+  "     ": {
+    "prefix": ["grid~5.给父元素添加grid-column-gap设置这些元素列的间隔"],
+    "body": ["grid-column-gap: 10px;"]
+  },
+  "    ": {
+    "prefix": ["grid~6.子元素更换位置"],
+    "body": [
+      "/* 哪个元素要更换到哪个位置，就给这个元素添加。 */",
+      "/* grid-row: 1 / 2;原位置子元素的行线 */",
+      "grid-row: 1 / 2;",
+      "/* grid-column: 1 / 3;原位置子元素的列线 */",
+      "grid-column: 1 / 3;"
+    ]
+  },
+  "   ": {
+    "prefix": ["grid~7.设置某个子元素横跨多个子元素的宽度或高度"],
+    "body": [
+      "/* 哪个元素要更换到哪个位置，就给这个元素添加。 */",
+      "/* grid-row: 1 / 2;跨原位置子元素的行线 */",
+      "grid-row: 1 / 2;",
+      "/* grid-column: 1 / 3;跨原位置子元素的列线 */",
+      "grid-column: 1 / 3;"
+    ]
+  },
+  "  ": {
+    "prefix": ["grid~8.给父元素添加子元素的垂直对齐方式"],
+    "body": [
+      "/* align-content: normal 默认为垂直对齐方式为顶部或 align-content: stretch */",
+      "/* align-content: center; 默认为垂直对齐方式为居中 */",
+      "/* align-content: space-between; 默认为垂直对齐方式先两端对齐再垂直居中 */",
+      "/* align-content: space-around; 默认为垂直对齐方式先两端留点小空间再平均分配剩余空间 */",
+      "/* align-content: space-evenly; 默认为垂直对齐方式平均分配剩余空间 */",
+      "align-content: normal;"
+    ]
+  },
+  " ": {
+    "prefix": ["grid~9.给父元素添加子元素的水平对齐方式"],
+    "body": [
+      "/* justify-content: normal; 默认为水平对齐方式为左边或 align-content: start */",
+      "/* justify-content: center; 默认为水平对齐方式为居中 */",
+      "/* justify-content: end; 默认为水平对齐方式为右对齐 */",
+      "/* justify-content: space-between; 默认为水平对齐方式为先两端对齐再平分剩余空间 */",
+      "/* justify-content: space-around; 默认为水平对齐方式为先两端留点小空间再平分剩余空间 */",
+      "/* justify-content: space-evenly; 默认为水平对齐方式为平分剩余空间 */",
+      "justify-content: normal;"
+    ]
+  },
+  "": {
+    "prefix": ["grid~10.实现网格布局最便捷方法"],
+    "body": [
+      "/* 步骤一：给父盒子开启网格布局容器 */",
+      "/* display: grid; */",
+      "/* 步骤二：给父盒子添加确定好布局骨架的属性 */",
+      "/* grid-template-areas: */",
+      "/*   \"yi  er san\" */",
+      "/*   \"yi  si si\"; */",
+      "/*  步骤三：给子元素填写骨架名 */",
+      "/*  grid-area: yi; */"
+    ]
+  }
+}
