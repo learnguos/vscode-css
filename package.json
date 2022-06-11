@@ -2,7 +2,7 @@
   "name": "vscode-css",
   "displayName": "vscode-css",
   "description": "css代码片段提示插件",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "learnguo",
   "keywords": [
     "css"
@@ -24,7 +24,7 @@
         "path": "./snippets/snippets.code-snippets"
       },
       {
-        "language": "html-css",
+        "language": "css",
         "path": "./snippets/snippets.code-snippets"
       }
     ]
