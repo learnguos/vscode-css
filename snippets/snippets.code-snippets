@@ -470,7 +470,7 @@
   },
 
   // 滚动条实现
-  "滚动条实现": {
+  "滚动条": {
     "prefix": ["gdt~滚动条实现"],
     "body": [
       " div {",
@@ -498,6 +498,18 @@
       "  border-radius: 10px;",
       "  background: #ededed;",
       "}"
+    ]
+  },
+  "设置默认滚动条样式": {
+    "prefix": ["gdt~设置默认滚动条样式"],
+    "body": [
+      "// 去掉默认水平滚动条,给body添加",
+      "overflow-x: hidden;",
+      "// 去掉默认垂直滚动条,给body添加",
+      "overflow-y: hidden;",
+      "// 表示隐藏横向滚动条，显示纵向滚动,给body添加",
+      "overflow-x:hidden;",
+      "overflow-y:scroll;"
     ]
   },
 

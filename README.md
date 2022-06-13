@@ -1092,7 +1092,7 @@
     "body": ["overflow-x"]
     ```
 
-#### 滚动条实现
+#### 滚动条
 
 - 呼出关键字：`gdt~滚动条实现` 
 
@@ -1129,6 +1129,26 @@
           "}"
         ]
     ```
+
+- 呼出关键字：`gdt~设置默认滚动条样式` 
+
+  - 上下超出部分
+
+  - Snipped 代码
+
+    ```javascript
+     "body": [
+          "// 去掉默认水平滚动条,给body添加",
+          "overflow-x: hidden;",
+          "// 去掉默认垂直滚动条,给body添加",
+          "overflow-y: hidden;",
+          "// 表示隐藏横向滚动条，显示纵向滚动,给body添加",
+          "overflow-x:hidden;",
+          "overflow-y:scroll;"
+        ]
+    ```
+
+
 
 #### 字体
 
